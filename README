@@ -9,3 +9,5 @@ On the other hands, there are the strategies. CollisionStrategy is the interface
 implements, and RemoveBrickStrategyDecorator which they all inherits, in order to avoid code duplication
 for breaking a single brick, and that way each strategy decorated the RemoveBrickStrategy that is needed
 to be implemented in any case.
+
+In order to use this repository, you will need to use the DanoGameLab external library, which I uploaded here in the same directory.
