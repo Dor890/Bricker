@@ -10,4 +10,4 @@ implements, and RemoveBrickStrategyDecorator which they all inherits, in order t
 for breaking a single brick, and that way each strategy decorated the RemoveBrickStrategy that is needed
 to be implemented in any case.
 
-In order to use this repository, you will need to use the DanoGameLab external library, which I uploaded here in the same directory.
+In order to use this repository, you will need to use the DanoGameLab external library, which I uploaded here as an internal directory in "src".
