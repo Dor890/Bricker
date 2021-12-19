@@ -1,47 +1,11 @@
-dor.messica
-318391877
-
-a. My project is divided to packages and classes according to different strategies and objects:
-  Each object in the game is implemented through a specific class, each extends GameObejct class:
-  Ball, Puck, Brick, Paddle, MockPaddle, NumericLifeCounter and NumericLifeCounter,
-  where Puck extends Ball as being a specific kind of a ball, exactly as Mockpaddle extends Paddle.
-  The last game object, BallCollisionCountdownAgent is only responsible for following each frame (by update
-  method) and check the ball collision counter, so for that it is implemented as an object but not being
-  rendered to the screen.
-  On the other hands, there are the strategies. CollisionStrategy is the interface which they are all
-  implements, and RemoveBrickStrategyDecorator which they all inherits, in order to avoid code duplication
-  for breaking a single brick, and that way each strategy decorated the RemoveBrickStrategy that is needed
-  to be implemented in any case.
-
-b. I chose to implement the WideNarrowPaddleStrategy in a new class so it can be implemented according to its
-  demands, and as any other strategy decorated the RemoveBrickStrategy. The object it creates is also
-  implemented by a new class, WideNarrowPaddle, so it will be able to extends the GameObject class.
-  I chose to implement both wide and narrow statuses in the same class to avoid code duplication, as they
-  both being implemented in the same way.
-
-c. alotStudyTime:
-  1. The algorithm sorts both arrays and implemented a greedly in order to check each time
-    the biggest time slot with the biggest task, and if the task doesn't have enough space,
-    we know we can already move to check the next task.
-  2. Both sortes takes O(nlogn) and the for loop is in the worst case O(n). Overall: T(n) = O(nlogn).
-
- minLeap:
- 1.The algorithm runs as long as we still aren't able to reach the last leaf, and takes the most stable leaf
- for the next iterating. The only exeption is that if we find a leaf that can take us right to the last
- leaf, we take in and finish the iterations.
- 2. In the worst case, the algorithm takes each leaf in the array. Overall: T(n) = O(n).
-
- bucketWalk:
- 1. The algorithm initiates the two base cases: when we need 0 or 1 liter. We pass over each number of litters
-   until reaching the input, and each one is being calculated as the addition of the 2 previous numbers,
-   as we already calculated them. We can notice that this question is very similar for calculation the
-   n'th fibonacci number.
- 2. Each iteration is being calculated in O(1), so overall: T(n) = O(n).
-
- numTrees:
- 1.  We can recognize this algorithm as calculating the n'th catalan number, so we initialize a list
-    with 2 base cases, and for each number from 2 to n (the input received) we run over all previous numbers
-    and calculates the formula with the previous calculated number that is saved in the array.
- 2.  We have 2 nested for loops, each takes O(1) for being calculated before,
-   so for the worst case the get T(n) = O(n^2).
-
+The project is divided to packages and classes according to different strategies and objects:
+Each object in the game is implemented through a specific class, each extends GameObejct class:
+Ball, Puck, Brick, Paddle, MockPaddle, NumericLifeCounter and NumericLifeCounter,
+where Puck extends Ball as being a specific kind of a ball, exactly as Mockpaddle extends Paddle.
+The last game object, BallCollisionCountdownAgent is only responsible for following each frame (by update
+method) and check the ball collision counter, so for that it is implemented as an object but not being
+rendered to the screen.
+On the other hands, there are the strategies. CollisionStrategy is the interface which they are all
+implements, and RemoveBrickStrategyDecorator which they all inherits, in order to avoid code duplication
+for breaking a single brick, and that way each strategy decorated the RemoveBrickStrategy that is needed
+to be implemented in any case.
